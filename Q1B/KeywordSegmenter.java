@@ -1,3 +1,4 @@
+package Q1B;
 // Algorithm Description (Algorithm Design)
 // To segment a continuous search string into valid keywords, we use a recursive "divide and conquer" strategy.
 

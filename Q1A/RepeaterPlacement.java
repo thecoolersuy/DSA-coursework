@@ -1,3 +1,4 @@
+package Q1A;
 // 1. Algorithm Description (Algorithm Design)
 // To find the maximum number of customer homes (points) that lie on a single straight line, we use a slope-based approach. 
 // This ensures we identify every possible linear alignment on the 2D grid efficiently.
