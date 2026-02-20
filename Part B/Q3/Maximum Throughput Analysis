@@ -1,0 +1,29 @@
+(a) Max-Flow Modeling 
+
+Source: Kathmandu (KTM)
+Sink: Bhaktapur Shelter (BS)
+Capacities: Represented by $c(u, v)$, the maximum trucks per hour on each road.
+
+(b) Edmonds-Karp Execution
+
+Note: Since the PDF does not provide the specific numerical capacity values for the edges in the text, I will describe the steps using typical capacity values to show you how to write the manual execution.
+
+1. Find Augmenting Path: Use BFS to find the shortest path in the residual graph with available capacity (e.g., KTM → JA → BS).
+
+2. Determine Bottleneck: Find the smallest capacity along that path (e.g., if KTM-JA is 10 and JA-BS is 7, bottleneck is 7).
+
+3. Augment Flow: Push 7 units.
+
+4. Update Residual Graph: Subtract 7 from forward capacities; add 7 to reverse capacities.
+
+5. Repeat: Repeat until no more paths exist from KTM to BS in the residual graph.
+
+
+(c) Final Max Flow and Min-Cut
+
+After completing the steps above, the Final Max Flow is the sum of all pushed flow.
+To demonstrate the Max-Flow Min-Cut Theorem:
+
+1. Identify the "Cut" (a set of edges that, if removed, disconnect KTM from BS).
+
+2. The sum of the capacities of the edges in the Minimum Cut will exactly equal the Maximum Flow value found in step (b).

@@ -1,0 +1,9 @@
+Answer (a): Why standard Dijkstra is not suitable
+Standard Dijkstra's algorithm is designed to find the shortest path by summing edge weights ($w_1 + w_2 + ...$). 
+In this scenario, we need to find the safest path, which is calculated by the product of probabilities ($p_1 \times p_2 \times ...$).
+Since Dijkstra's is mathematically built for addition, it cannot directly handle a product-based optimization because the logic of "shorter is better" doesn't automatically translate to "higher probability is better" without modification.
+
+Answer (b): Why maximizing probabilities is problematic
+Dijkstra's is a "greedy" algorithm that assumes adding a positive edge weight always makes the path "longer" (worse). 
+However, probabilities are values between 0 and 1. Multiplying by a value between 0 and 1 always makes the result smaller, not larger. 
+Standard Dijkstra's seeks to minimize a sum; if we try to "maximize a product" without transformation, the standard priority queue logic and the "relaxation" step will not work correctly, as the algorithm isn't designed to find the "maximum" of a shrinking product.

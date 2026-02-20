@@ -1,0 +1,5 @@
+(c) Proof of Correctness
+
+The algorithm is correct because:The function $f(x) = -\log(x)$ is a monotonically decreasing function. 
+Thus, maximizing $P$ is equivalent to minimizing $-\log(P)$.The sum of negative logs $\sum -\log(p_i)$ is equal to $-\log(\prod p_i)$.Since $0 < p_i \le 1$, the weights $w(e) = -\log(p_i)$ are always $\ge 0$. 
+This satisfies the non-negative weight requirement for Dijkstra’s algorithm, ensuring it reaches an optimal solution.

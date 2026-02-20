@@ -1,0 +1,5 @@
+(a) Transformation Logic 
+
+To use Dijkstra’s, we must turn the product of probabilities into a sum of weights. We use the property of logarithms:$$\log(a \times b) = \log(a) + \log(b)$$Since probabilities $p(e)$ are $\le 1$, their $\log$ values are $\le 0$ (negative). 
+
+Dijkstra's requires non-negative weights. Therefore, we define the new weight $w(e)$ as:$$w(e) = -\log(p(e))$$By taking the negative log, a high probability (e.g., 0.99) results in a small weight (0.01), and a low probability (e.g., 0.1) results in a large weight (2.3). Minimizing the sum of these negative logs is mathematically identical to maximizing the product of the original probabilities.
